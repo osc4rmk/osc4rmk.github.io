@@ -22,8 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Kirim hasil ke halaman hasil.php
-    header("Location: formcalculator.php?hasil=" . urlencode($hasil) . "&digit1=$digit1&digit2=$digit2&operator=" . urlencode($operator));
+    header("Location: index.php?hasil=" . urlencode($hasil) . "&digit1=$digit1&digit2=$digit2&operator=" . urlencode($operator));
     exit();
 } else {
     echo "Akses tidak valid!";
 }
+
