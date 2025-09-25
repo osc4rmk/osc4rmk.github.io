@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        .my-box {
+            background-color: orange;
+            padding: 100px;
+            width: 100px;
+            border: 0.5px solid black;
+            text-align: left;
+            font-size: 10px;
+            font-family: monospace;
+            color: black;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin: 20px auto;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+        }
+
+        ;
+
+        .body {
+            background-color: lightblue
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <div class="html5-icon" align="right">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5 Logo"
+            width="25" height="25">
+    </div>
+    <h1>Hello, World!</h1>
+    <p>This is a test page.</p>
+    <div class="my-box">
+        <h1>hello, World</h1>
+        <p>This is a test page.</p>
+        <script>
+            hoverBox = document.querySelector('.my-box');
+            hoverBox.addEventListener('mouseover', function () {
+                hoverBox.style.backgroundColor = 'yellow';
+                hoverBox.style.transform = 'scale(1.03)';
+            });
+            hoverBox.addEventListener('mouseout', function () {
+                hoverBox.style.backgroundColor = 'orange';
+                hoverBox.style.transform = 'scale(1)';
+            });
+            hoverBox.addEventListener('click', function () {
+                newText = hoverBox.querySelector('p:last-child');
+                if (newText && newText.textContent === 'You clicked the box!') {
+                    return; // Prevent adding multiple messages
+                }
+                newText = document.createElement('p');
+                newText.textContent = 'You clicked the box!';
+                hoverBox.appendChild(newText);
+                setTimeout(function () {
+                    convincetext = document.createElement('p');
+                    convincetext.textContent = 'Wait for it...';
+                    hoverBox.appendChild(convincetext);
+                }, 1000);
+                setTimeout(function () {
+                    hoverBox.removeChild(newText);
+                    convincetext.textContent = ':)';
+                }, 4000);
+                setTimeout(function () {
+                    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                }, 4500);
+            });
+        </script>
+    </div>
+    <br><br>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a>
+    <footer>
+        <p>&par; 2025 Test Page</p>
+    </footer>
+</body>
+
+</html>
